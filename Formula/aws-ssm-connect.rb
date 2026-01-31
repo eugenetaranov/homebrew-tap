@@ -5,23 +5,21 @@
 class AwsSsmConnect < Formula
   desc "CLI tool for connecting to AWS EC2 instances via SSM Session Manager"
   homepage "https://github.com/eugenetaranov/aws-ssm-connect"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
-
-  depends_on "session-manager-plugin" => :recommended
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/eugenetaranov/aws-ssm-connect/releases/download/v0.1.1/aws-ssm-connect_0.1.1_darwin_amd64.tar.gz"
-      sha256 "12e3d55d1bb95d50dce76cb88af64b9f9606a10748d53bdefb2e247935ade788"
+      url "https://github.com/eugenetaranov/aws-ssm-connect/releases/download/v0.1.2/aws-ssm-connect_0.1.2_darwin_amd64.tar.gz"
+      sha256 "166c70c56266cc01374bf96778e79b336fde7766cebb2975365103588e492190"
 
       def install
         bin.install "aws-ssm-connect"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/eugenetaranov/aws-ssm-connect/releases/download/v0.1.1/aws-ssm-connect_0.1.1_darwin_arm64.tar.gz"
-      sha256 "4f77248a264c7361740c2b51acc883189fc65335d94f2f5a480030eb9b805b79"
+      url "https://github.com/eugenetaranov/aws-ssm-connect/releases/download/v0.1.2/aws-ssm-connect_0.1.2_darwin_arm64.tar.gz"
+      sha256 "aa42f94d6684203a6251b6e12a6122c996c36912b4bc1d3a25d8459b301cba0f"
 
       def install
         bin.install "aws-ssm-connect"
@@ -31,19 +29,26 @@ class AwsSsmConnect < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eugenetaranov/aws-ssm-connect/releases/download/v0.1.1/aws-ssm-connect_0.1.1_linux_amd64.tar.gz"
-      sha256 "9b992bd53b9e8eb0fd87b01d00a0719c04cffe348a00c4c0d48a7f95081e788a"
+      url "https://github.com/eugenetaranov/aws-ssm-connect/releases/download/v0.1.2/aws-ssm-connect_0.1.2_linux_amd64.tar.gz"
+      sha256 "9fc539d3392329d7ef5ded74a4bffe49bbdf9c00ee9663cf6cbb6985e837dbfa"
       def install
         bin.install "aws-ssm-connect"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eugenetaranov/aws-ssm-connect/releases/download/v0.1.1/aws-ssm-connect_0.1.1_linux_arm64.tar.gz"
-      sha256 "9d2f6f569f34e43914043f57406a7ce7e74f090dd0c62eb146c87770e0f73902"
+      url "https://github.com/eugenetaranov/aws-ssm-connect/releases/download/v0.1.2/aws-ssm-connect_0.1.2_linux_arm64.tar.gz"
+      sha256 "f16b9e85124bb40a46b91463d26ba17e8f7a9fa68ed43a0f97d169b8d0dfdd24"
       def install
         bin.install "aws-ssm-connect"
       end
     end
+  end
+
+  def caveats
+    <<~EOS
+      This tool requires the AWS Session Manager Plugin.
+      Install it with: brew install --cask session-manager-plugin
+    EOS
   end
 
   test do
