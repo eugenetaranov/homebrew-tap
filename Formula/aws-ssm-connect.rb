@@ -5,21 +5,21 @@
 class AwsSsmConnect < Formula
   desc "CLI tool for connecting to AWS EC2 instances via SSM Session Manager"
   homepage "https://github.com/eugenetaranov/aws-ssm-connect"
-  version "0.1.2"
+  version "0.1.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/eugenetaranov/aws-ssm-connect/releases/download/v0.1.2/aws-ssm-connect_0.1.2_darwin_amd64.tar.gz"
-      sha256 "166c70c56266cc01374bf96778e79b336fde7766cebb2975365103588e492190"
+      url "https://github.com/eugenetaranov/aws-ssm-connect/releases/download/v0.1.3/aws-ssm-connect_0.1.3_darwin_amd64.tar.gz"
+      sha256 "5594138b8725ba82c61ab4030f37dab26e6f7ae88303cf278081fd12ed7d2a8e"
 
       def install
         bin.install "aws-ssm-connect"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/eugenetaranov/aws-ssm-connect/releases/download/v0.1.2/aws-ssm-connect_0.1.2_darwin_arm64.tar.gz"
-      sha256 "aa42f94d6684203a6251b6e12a6122c996c36912b4bc1d3a25d8459b301cba0f"
+      url "https://github.com/eugenetaranov/aws-ssm-connect/releases/download/v0.1.3/aws-ssm-connect_0.1.3_darwin_arm64.tar.gz"
+      sha256 "f89b3445dd7c7609af6ddf9ffc60616f0f4f76fa96cbf07bc4605ec766267511"
 
       def install
         bin.install "aws-ssm-connect"
@@ -29,15 +29,15 @@ class AwsSsmConnect < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eugenetaranov/aws-ssm-connect/releases/download/v0.1.2/aws-ssm-connect_0.1.2_linux_amd64.tar.gz"
-      sha256 "9fc539d3392329d7ef5ded74a4bffe49bbdf9c00ee9663cf6cbb6985e837dbfa"
+      url "https://github.com/eugenetaranov/aws-ssm-connect/releases/download/v0.1.3/aws-ssm-connect_0.1.3_linux_amd64.tar.gz"
+      sha256 "9e5ffc5b0a9f0f5f516fc67b3068fc3977f1458c7594fb8254ccb2591ad55f42"
       def install
         bin.install "aws-ssm-connect"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eugenetaranov/aws-ssm-connect/releases/download/v0.1.2/aws-ssm-connect_0.1.2_linux_arm64.tar.gz"
-      sha256 "f16b9e85124bb40a46b91463d26ba17e8f7a9fa68ed43a0f97d169b8d0dfdd24"
+      url "https://github.com/eugenetaranov/aws-ssm-connect/releases/download/v0.1.3/aws-ssm-connect_0.1.3_linux_arm64.tar.gz"
+      sha256 "b76738e5d3ca0ac456e35dcb906729433010cdadcf80ebfd62c5414f2974bd0a"
       def install
         bin.install "aws-ssm-connect"
       end
