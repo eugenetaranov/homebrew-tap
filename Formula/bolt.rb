@@ -5,23 +5,23 @@
 class Bolt < Formula
   desc "Configuration management and system bootstrapping tool inspired by Ansible"
   homepage "https://github.com/eugenetaranov/bolt"
-  version "1.0.10"
+  version "1.0.11"
   license "MIT"
 
   depends_on "go" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/eugenetaranov/bolt/releases/download/v1.0.10/bolt_1.0.10_darwin_amd64.tar.gz"
-      sha256 "46ea65759a143461d824031790b18208148508171b2de30291f4aa61b617b8aa"
+      url "https://github.com/eugenetaranov/bolt/releases/download/v1.0.11/bolt_1.0.11_darwin_amd64.tar.gz"
+      sha256 "8a9b0a58c0fd52e29a598e7776058a923645a85f91631cf83105d55b0fc5b5b2"
 
       define_method(:install) do
         bin.install "bolt"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/eugenetaranov/bolt/releases/download/v1.0.10/bolt_1.0.10_darwin_arm64.tar.gz"
-      sha256 "12942d9a1210c5f40ce6f207863a6f047a88e3f5ce0aaa28b5bd6123851e3d14"
+      url "https://github.com/eugenetaranov/bolt/releases/download/v1.0.11/bolt_1.0.11_darwin_arm64.tar.gz"
+      sha256 "42b5c925a476003fc54a686e9646ececd08aaa30b25eed09b5814ccdf14492c0"
 
       define_method(:install) do
         bin.install "bolt"
@@ -31,15 +31,15 @@ class Bolt < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eugenetaranov/bolt/releases/download/v1.0.10/bolt_1.0.10_linux_amd64.tar.gz"
-      sha256 "53aa84ba76e3a1b941fa15b7087ebb97907acabc468c72ff9cc065edc4d8debb"
+      url "https://github.com/eugenetaranov/bolt/releases/download/v1.0.11/bolt_1.0.11_linux_amd64.tar.gz"
+      sha256 "7996798535e2a44d13cbb4a0ad3e2ea5dd2d9efe42397b3f1679274650d226f4"
       define_method(:install) do
         bin.install "bolt"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eugenetaranov/bolt/releases/download/v1.0.10/bolt_1.0.10_linux_arm64.tar.gz"
-      sha256 "abd7c7ae8a462e203dc238281e9b77962a34caa9fa5e58aff51406642ca565f9"
+      url "https://github.com/eugenetaranov/bolt/releases/download/v1.0.11/bolt_1.0.11_linux_arm64.tar.gz"
+      sha256 "8a9d8225285d51cf14a49abdaa9a6ede47b593230b565f3d2f6ef9cc6747f607"
       define_method(:install) do
         bin.install "bolt"
       end
