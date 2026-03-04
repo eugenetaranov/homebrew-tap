@@ -5,23 +5,23 @@
 class Mysqlmonitoring < Formula
   desc "MySQL lock monitor - detect lock contention, long transactions, and deadlocks"
   homepage "https://github.com/eugenetaranov/mysqlmonitoring"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   depends_on "go" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/eugenetaranov/mysqlmonitoring/releases/download/v0.1.0/mysqlmonitoring_0.1.0_darwin_amd64.tar.gz"
-      sha256 "a6569ed8bc146f4b76e8bfd99c9d3fafcc61578a1afd25f551727cb504de0cf7"
+      url "https://github.com/eugenetaranov/mysqlmonitoring/releases/download/v0.1.1/mysqlmonitoring_0.1.1_darwin_amd64.tar.gz"
+      sha256 "12888ef84a7976c9399c9eca2bdd28e9a30703eb4449c2ae8f40bbab9f57a366"
 
       define_method(:install) do
         bin.install "mysqlmonitoring"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/eugenetaranov/mysqlmonitoring/releases/download/v0.1.0/mysqlmonitoring_0.1.0_darwin_arm64.tar.gz"
-      sha256 "219a596ba65c5b26b540a6d88ba42815eccf8a2287f6fbe7d466dc201960b9e2"
+      url "https://github.com/eugenetaranov/mysqlmonitoring/releases/download/v0.1.1/mysqlmonitoring_0.1.1_darwin_arm64.tar.gz"
+      sha256 "2374187ee71b19a4a3825d621abddf8e49c3a32c21dd3582f54d0b8b9c03f684"
 
       define_method(:install) do
         bin.install "mysqlmonitoring"
@@ -31,15 +31,15 @@ class Mysqlmonitoring < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eugenetaranov/mysqlmonitoring/releases/download/v0.1.0/mysqlmonitoring_0.1.0_linux_amd64.tar.gz"
-      sha256 "3e53e0a308f5b67a76b3e15ccec63919ce73b52cf63f4cad6b2c0d5de757fdac"
+      url "https://github.com/eugenetaranov/mysqlmonitoring/releases/download/v0.1.1/mysqlmonitoring_0.1.1_linux_amd64.tar.gz"
+      sha256 "2bb55d283a52416203e26ed455b770ed4fc28a26ae192fc3ed1b75cc6c52a034"
       define_method(:install) do
         bin.install "mysqlmonitoring"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eugenetaranov/mysqlmonitoring/releases/download/v0.1.0/mysqlmonitoring_0.1.0_linux_arm64.tar.gz"
-      sha256 "d4010913f0d22e7a854f08157074a494836eec99d00da7ca8f0e34dd2ceea46a"
+      url "https://github.com/eugenetaranov/mysqlmonitoring/releases/download/v0.1.1/mysqlmonitoring_0.1.1_linux_arm64.tar.gz"
+      sha256 "183b8eb64c6bc2973899bcc6bb7d5cbb2d2e584f849cf13e680391035465ebfe"
       define_method(:install) do
         bin.install "mysqlmonitoring"
       end
