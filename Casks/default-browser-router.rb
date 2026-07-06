@@ -1,6 +1,6 @@
 cask "default-browser-router" do
-  version "0.0.4"
-  sha256 "ad6fff3a20fef906e721b19f45509e591d3e7f5128c47fee2202f808e3220f31"
+  version "0.0.5"
+  sha256 "3a26f0dca8e114f0d79553da2e30af73ecf6297ba9141ceb3ce513e8cd41a422"
 
   url "https://github.com/eugenetaranov/default-browser/releases/download/v#{version}/DefaultBrowserRouter.zip"
   name "Default Browser Router"
