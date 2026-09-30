@@ -5,23 +5,23 @@
 class Ssmsearch < Formula
   desc "AWS SSM Parameter Store CLI with fuzzy search and caching"
   homepage "https://github.com/eugenetaranov/ssmsearch"
-  version "0.1.5"
+  version "0.1.6"
   license "MIT"
 
   depends_on "go" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/eugenetaranov/ssmsearch/releases/download/v0.1.5/ssmsearch_0.1.5_darwin_amd64.tar.gz"
-      sha256 "931797e49bbce39903fddc54ba9412ea943196998b360aacac8e933138aa1fcb"
+      url "https://github.com/eugenetaranov/ssmsearch/releases/download/v0.1.6/ssmsearch_0.1.6_darwin_amd64.tar.gz"
+      sha256 "a220108c0f36b0135cb4a58f999d1cf25820ffcf0568532d285d403364b6c252"
 
       define_method(:install) do
         bin.install "ssmsearch"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/eugenetaranov/ssmsearch/releases/download/v0.1.5/ssmsearch_0.1.5_darwin_arm64.tar.gz"
-      sha256 "3ce9450549f76eb7a72fc1801c65b69b854f19bb40757411b2728b4e664abe0e"
+      url "https://github.com/eugenetaranov/ssmsearch/releases/download/v0.1.6/ssmsearch_0.1.6_darwin_arm64.tar.gz"
+      sha256 "f6cfb9fec17236bb33321b75b34910466e592ef0bb0f725f007f68d8b1561acb"
 
       define_method(:install) do
         bin.install "ssmsearch"
@@ -31,15 +31,15 @@ class Ssmsearch < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eugenetaranov/ssmsearch/releases/download/v0.1.5/ssmsearch_0.1.5_linux_amd64.tar.gz"
-      sha256 "7e86e016e9cb80721e599d2d8d9f9511f124970b819c2d8c224f6f89b5aaa7c8"
+      url "https://github.com/eugenetaranov/ssmsearch/releases/download/v0.1.6/ssmsearch_0.1.6_linux_amd64.tar.gz"
+      sha256 "a264a3b74c2c472e7353b4b0dd6a07718c11d2bc6c510d99dfe3c1bfae68dc75"
       define_method(:install) do
         bin.install "ssmsearch"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eugenetaranov/ssmsearch/releases/download/v0.1.5/ssmsearch_0.1.5_linux_arm64.tar.gz"
-      sha256 "ffd6b91c728a8effde936a2b38375433f818e2a83110bcb212a2c11a0cd6b60b"
+      url "https://github.com/eugenetaranov/ssmsearch/releases/download/v0.1.6/ssmsearch_0.1.6_linux_arm64.tar.gz"
+      sha256 "4692998608e162bfb2a0af549467069511a12efd5144afd2014e4d8297f162bc"
       define_method(:install) do
         bin.install "ssmsearch"
       end
