@@ -5,21 +5,21 @@
 class Jiractl < Formula
   desc "CLI tool for interacting with Jira"
   homepage "https://github.com/eugenetaranov/jiractl"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/eugenetaranov/jiractl/releases/download/v0.2.0/jiractl_0.2.0_darwin_amd64.tar.gz"
-      sha256 "30258378ed67c4d9fd048b4d210476e98260f456d697f0429c34ae2c2e19c520"
+      url "https://github.com/eugenetaranov/jiractl/releases/download/v0.2.1/jiractl_0.2.1_darwin_amd64.tar.gz"
+      sha256 "b9c9d48c9e9cd560b593ba3bddd79123c8ae067a6c869a9778c1c89f769dd74a"
 
       define_method(:install) do
         bin.install "jiractl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/eugenetaranov/jiractl/releases/download/v0.2.0/jiractl_0.2.0_darwin_arm64.tar.gz"
-      sha256 "240df990bef2f314bb06a6f615eef72be3b585e68785adf425a8c5f79ab1a2e9"
+      url "https://github.com/eugenetaranov/jiractl/releases/download/v0.2.1/jiractl_0.2.1_darwin_arm64.tar.gz"
+      sha256 "e18bc24c9c8adcd56e56c8df0e3af0a5aadb3c52e64fa81fa9ebed2130cf3c33"
 
       define_method(:install) do
         bin.install "jiractl"
@@ -29,15 +29,15 @@ class Jiractl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eugenetaranov/jiractl/releases/download/v0.2.0/jiractl_0.2.0_linux_amd64.tar.gz"
-      sha256 "dcee03eada999dd3b7caa2db3ba6920a1e27335e406f208ca35abf73e9d2e177"
+      url "https://github.com/eugenetaranov/jiractl/releases/download/v0.2.1/jiractl_0.2.1_linux_amd64.tar.gz"
+      sha256 "d6c465b03b6d716b2bfc0fb5df0b087a585f89131ce8d47d51f6b94b57c2788d"
       define_method(:install) do
         bin.install "jiractl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eugenetaranov/jiractl/releases/download/v0.2.0/jiractl_0.2.0_linux_arm64.tar.gz"
-      sha256 "9f5e0bfa4ea7bea7aa709d3543c869f196371c9f35f5983cbd7c0f8b515b124a"
+      url "https://github.com/eugenetaranov/jiractl/releases/download/v0.2.1/jiractl_0.2.1_linux_arm64.tar.gz"
+      sha256 "9ae12735d9046e5b7dfe42059179c676d01481e7c94d71f6eabef5b0dca4669e"
       define_method(:install) do
         bin.install "jiractl"
       end
