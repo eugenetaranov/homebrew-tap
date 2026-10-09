@@ -5,23 +5,23 @@
 class Pmox < Formula
   desc "Multipass-style CLI for launching and managing VMs on Proxmox VE"
   homepage "https://github.com/eugenetaranov/pmox"
-  version "0.31.0"
+  version "0.31.1"
   license "MIT"
 
   depends_on "go" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/eugenetaranov/pmox/releases/download/v0.31.0/pmox_0.31.0_darwin_amd64.tar.gz"
-      sha256 "c416fe3a80ef00659abd8e46ca3063b34ce938aed88bc6617f3ddb0c2e288bab"
+      url "https://github.com/eugenetaranov/pmox/releases/download/v0.31.1/pmox_0.31.1_darwin_amd64.tar.gz"
+      sha256 "d891e247038580cdbfff3f5e63862b13102898e8a05ede08c6b67be895869408"
 
       define_method(:install) do
         bin.install "pmox"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/eugenetaranov/pmox/releases/download/v0.31.0/pmox_0.31.0_darwin_arm64.tar.gz"
-      sha256 "f86331f365f191e3b1f9feee1f2996ca52c334e2383aeb48c3a97bb80d0fc765"
+      url "https://github.com/eugenetaranov/pmox/releases/download/v0.31.1/pmox_0.31.1_darwin_arm64.tar.gz"
+      sha256 "378f4a0a8a6b035c30a54e5edd952fd96563e1ab65d34a2c785ccc5cd2690f1a"
 
       define_method(:install) do
         bin.install "pmox"
@@ -31,15 +31,15 @@ class Pmox < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eugenetaranov/pmox/releases/download/v0.31.0/pmox_0.31.0_linux_amd64.tar.gz"
-      sha256 "d80ccb842eeb32d6a61a599b2f626d70a1a173995b73f9e8493773262af3cbb3"
+      url "https://github.com/eugenetaranov/pmox/releases/download/v0.31.1/pmox_0.31.1_linux_amd64.tar.gz"
+      sha256 "ec2ffb5a1540d5abe47f3dbbf5eee7eedc7d7c1a37c0d8c3493479185fd32132"
       define_method(:install) do
         bin.install "pmox"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eugenetaranov/pmox/releases/download/v0.31.0/pmox_0.31.0_linux_arm64.tar.gz"
-      sha256 "42a925ad7240ff72d1259124a4b5a66ee47d5c8b0e4383c4cad6a442a7071330"
+      url "https://github.com/eugenetaranov/pmox/releases/download/v0.31.1/pmox_0.31.1_linux_arm64.tar.gz"
+      sha256 "4acb967612e5c26dbd9094555d74bc72d416d537467ef8729a326f155788b153"
       define_method(:install) do
         bin.install "pmox"
       end
