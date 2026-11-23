@@ -5,20 +5,20 @@
 class Yardo < Formula
   desc "Set up a Linux dev machine for you and your AI agents"
   homepage "https://github.com/eugenetaranov/yardo"
-  version "0.33.5"
+  version "0.33.6"
   license "MIT"
   depends_on :linux
 
   if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-    url "https://github.com/eugenetaranov/yardo/releases/download/v0.33.5/yardo_0.33.5_linux_amd64.tar.gz"
-    sha256 "7c42dfdae4ffadcc41b8d32f1eeedaea0e31e7d6e5253144f35f1f61b35e23bc"
+    url "https://github.com/eugenetaranov/yardo/releases/download/v0.33.6/yardo_0.33.6_linux_amd64.tar.gz"
+    sha256 "74d36ae200530ad7e7febc53c3ba59331a583a8af6a14b5b3c0b5be69c10be9e"
     define_method(:install) do
       bin.install "yardo"
     end
   end
   if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/eugenetaranov/yardo/releases/download/v0.33.5/yardo_0.33.5_linux_arm64.tar.gz"
-    sha256 "6f062347ca127d1c52dd49e74602a483ed822958ea741cd72c357176070eee07"
+    url "https://github.com/eugenetaranov/yardo/releases/download/v0.33.6/yardo_0.33.6_linux_arm64.tar.gz"
+    sha256 "72a84800c3f91e2228339b0419e0ee11fa1f708bba8c360261c26bdada2cd3b2"
     define_method(:install) do
       bin.install "yardo"
     end
